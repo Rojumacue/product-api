@@ -1,6 +1,5 @@
-package com.product.productapi.infrastructure;
+package com.product.productapi.domain;
 
-import com.product.productapi.domain.Product;
 
 import java.util.List;
 

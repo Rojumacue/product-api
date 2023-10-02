@@ -2,6 +2,7 @@ package com.product.productapi.infrastructure;
 
 import com.product.productapi.config.RestTemplateResponseErrorHandler;
 import com.product.productapi.domain.Product;
+import com.product.productapi.domain.ProductIntegrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -17,9 +18,9 @@ import java.util.Objects;
 public class ProductIntegrationServiceImpl implements ProductIntegrationService {
     private  RestTemplate restTemplate;
     @Value("${api.product.details}")
-    private String urlProductDetail;
+    public String urlProductDetail;
     @Value("${api.similar.idproduct}")
-    private String urlSimilarIdProduct;
+    public String urlSimilarIdProduct;
 
     @Autowired
     public ProductIntegrationServiceImpl (RestTemplateBuilder restTemplateBuilder) {
@@ -44,7 +45,4 @@ public class ProductIntegrationServiceImpl implements ProductIntegrationService 
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
     }
 
-    public void setRestTemplate(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
 }
