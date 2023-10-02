@@ -1,11 +1,9 @@
-package com.product.productapi.application;
+package com.product.productapi.domain;
 
-import com.product.productapi.domain.Product;
 
 import java.util.List;
 
 public interface ProductService {
-
 
     List<Product> similarProducts(String productId);
 

@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Service
 public class ProductIntegrationServiceImpl implements ProductIntegrationService {
-    private  RestTemplate restTemplate;
+    private final  RestTemplate restTemplate;
     @Value("${api.product.details}")
     public String urlProductDetail;
     @Value("${api.similar.idproduct}")

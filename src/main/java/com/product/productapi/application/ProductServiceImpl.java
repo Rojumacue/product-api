@@ -1,7 +1,8 @@
 package com.product.productapi.application;
 
 import com.product.productapi.domain.Product;
-import com.product.productapi.infrastructure.ProductIntegrationService;
+import com.product.productapi.domain.ProductService;
+import com.product.productapi.domain.ProductIntegrationService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
