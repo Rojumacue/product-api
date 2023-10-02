@@ -1,4 +1,4 @@
-package com.product.productapi.dto;
+package com.product.productapi.domain;
 
 import lombok.Getter;
 import lombok.Setter;
